@@ -50,7 +50,7 @@
 
 9. Explore Differences Between the var and let Keywords
 - > (var) can have same variable name 
-- >But when you use (let), a variable with the same name can only be declared once.
+- > But when you use (let), a variable with the same name can only be declared once.
 - > Example : 
             var myName = "Karan" ;
             var myname = "Shah" ;
@@ -59,3 +59,11 @@
             let myName = "Karan" ;
             let myName = "Shah" ;
             log.console(myName);  // throws error and gives no output 
+
+10. Declare a Read-Only Variable with the const Keyword
+- > (const) keyword assigns a constant value, which means that once a variable is assigned with const, it cannot be reassigned .
+
+            const FCC = "freeCodeCamp"; // assigns the constant value "freeCodeCamp"
+            let fact = "is cool!"; // assigns the value "is awesome"
+            fact = "is awesome!";
+            console.log(FCC, fact); // gives output "freeCodeCamp is awesome"
