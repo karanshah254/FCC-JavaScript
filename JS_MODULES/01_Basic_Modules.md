@@ -5,7 +5,8 @@
 1. Comment Your Java-Script Code
 - > Below is example of how to comment the code in JavaScript .
 
-            Example :-
+            Example :
+            
             // This is in-line comment .
             /* This is s multi-line comment */
 
@@ -19,7 +20,8 @@
 3. Storing Values with the Assignment Operator
 - > In JavaScript, you can store a value in a variable with the assignment operator (=) .
 
-            Example : 
+            Example :
+
             var a; // Declared the variable a 
             a=7;   // Assigned value 7 to a 
 
@@ -27,6 +29,7 @@
 - > We can assign the value of one variable to another by using (=) .
 
             Example : 
+
             var a; //Declared variable a .
             a=5;   // Assign value 7 to a .
             var b; // Declare variable b .
@@ -35,19 +38,22 @@
 5. Initializing a variable an initial value in the same line .
 - > Initializing in same line . 
 
-            Example : 
+            Example :
+
             var a=9; // Initialized the value 9 to variable a .
 
 6. Declaring String Variables
 - > A string literal, or string, is a series of characters enclosed in single or double quotes.
 
-            Example : 
+            Example :
+
             var myName = "name" ;  //  "name" is known as string literals .
 
 7. Understanding Uninitialized Variables
 - > Below is the example ,
 
-            Example : 
+            Example :
+
             var a=5;
             var b=10;
             var c="I am a";
@@ -61,6 +67,7 @@
 - >  In camelCase, multi-word variable names have the first word in lowercase and the first letter of each subsequent word is capitalized .
 
             Example : 
+
             var someVariable;
             someVariable = 10 ;
 
@@ -69,6 +76,7 @@
 - > But when you use (let), a variable with the same name can only be declared once.
             
             Example : 
+
             var myName = "Karan" ;
             var myname = "Shah" ;
             log.console(myName);  //gives output "Shah" & console.log(varaible_name); prints the output
@@ -80,6 +88,8 @@
 10. Declare a Read-Only Variable with the const Keyword
 - > (const) keyword assigns a constant value, which means that once a variable is assigned with const, it cannot be reassigned .
 
+            Example :
+
             const FCC = "freeCodeCamp"; // assigns the constant value "freeCodeCamp"
             let fact = "is cool!"; // assigns the value "is awesome"
             fact = "is awesome!";
@@ -89,12 +99,14 @@
 - > JavaScript uses the + symbol as an addition operator when placed between two numbers.
 
             Example :
+
             const sum = 10 + 10 // sum will be 20 
 
 12. Subtract One Number from Another with JavaScript
 - > JavaScript uses the - symbol for subtraction .
 
             Example :
+
             const diff = 45 - 33 ; // diff will be 12
 
 13. Multiply Two Numbers with JavaScript
