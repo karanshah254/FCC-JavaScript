@@ -4,12 +4,12 @@
 
 1. Comment Your Java-Script Code 
 
-        ```js
+    ```js
 
-        // This is in-line comment 
-        /* This is s multi-line comment */
+    // This is in-line comment 
+    /* This is s multi-line comment */
         
-        ```
+    ```
 
 2. Declare JavaScript Variables 
 - > JavaScript provides eight different data types .
