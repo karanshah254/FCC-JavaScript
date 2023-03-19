@@ -194,3 +194,78 @@
 
     console.log(a,b,c); // prints 5 -6 2 as a output
     ```
+23. Compound Assignment With Augmented Multiplication
+
+    ```js
+    let a = 5;
+    let b = 12;
+    let c = 4.6;
+
+    a *= 5; // equvalent to a = a * 5 ;
+    b *= 3 ; // equvalent to b = b * 3 ;
+    c *= 10 ; // equvalent to c = c * 3 ;
+    ```
+24. Compound Assignment With Augmented Division
+
+    ```js
+    let a = 48;
+    let b = 108;
+    let c = 33;
+
+    a /= 12; // equivalent to a = a / 12;
+    b /= 4;  // equivalent to b = b / 4;
+    c /=  11; // equivalent to c = c / 11;
+    ```
+25. Escaping Literal Quotes in Strings
+- > When you are defining a string you must start and end with a single or double quote .
+- > In JavaScript, you can escape a quote from considering it as an end of string quote by placing a backslash (\) in front of the quote .
+
+    ```js
+    const myStr = "I am a \"double quoted\" string inside \"double quotes\"." 
+
+    console.log(myStr); // Gives output I am a "double quoted" string inside "double quotes".
+    ```
+
+26. Quoting Strings with Single Quotes
+- > String values in JavaScript may be written with single or double quotes, as long as you start and end with the same type of quote.
+- > Unlike some other programming languages, single and double quotes work the same in JavaScript.
+
+    ```js
+    const myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
+    ```
+
+27. Escape Sequences in Strings
+
+    ```js
+    Code	Output
+    \'	    single quote
+    \"	    double quote
+    \\	    backslash
+    \n	    newline
+    \t	    tab
+    \r	    carriage return
+    \b	    word boundary
+    \f	    form feed
+    ```
+
+    ```js
+    const myStr = "FirstLine\n\t\\SecondLine\nThirdLine"; // Change this line
+    console.log(myStr); 
+    
+    /* Output : 
+
+    FirstLine
+	    \SecondLine
+    ThirdLine
+
+    */
+    ```
+
+28. Concatenating Strings with Plus Operator
+- > In JavaScript, when the + operator is used with a String value, it is called the concatenation operator .
+
+    ```js
+    const myStr = "This is the start. "+"This is the end."; // Change this line
+
+    console.log(myStr); // Output is This is the start. This is the end.
+    ```
