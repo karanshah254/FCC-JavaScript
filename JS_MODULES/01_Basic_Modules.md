@@ -3,12 +3,13 @@
 # Module - 1
 
 1. Comment Your Java-Script Code 
-<code>
 
-// This is in-line comment 
-/* This is s multi-line comment */
+        ```js
+
+        // This is in-line comment 
+        /* This is s multi-line comment */
         
-</code>
+        ```
 
 2. Declare JavaScript Variables 
 - > JavaScript provides eight different data types .
