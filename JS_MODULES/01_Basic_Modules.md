@@ -3,12 +3,12 @@
 # Module - 1
 
 1. Comment Your Java-Script Code
-- > Below is example of how to comment the code in JavaScript .
 
-            Example :
-            
+            ```js
             // This is in-line comment .
             /* This is s multi-line comment */
+
+            ```
 
 2. Declare JavaScript Variables 
 - > JavaScript provides eight different data types .
