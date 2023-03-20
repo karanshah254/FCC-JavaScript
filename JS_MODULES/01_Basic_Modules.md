@@ -269,3 +269,85 @@
 
     console.log(myStr); // Output is This is the start. This is the end.
     ```
+
+29. Concatenating Strings with the Plus Equals Operator
+- > We can also use the += operator to concatenate a string onto the end of an existing string variable.
+- >This can be very helpful to break a long string over several lines.
+
+    ```js
+    let myStr="This is the first sentence.";
+    myStr+= " This is the second sentence.";
+
+    console.log(myStr); 
+
+    /* Output : 
+    This is the first sentence. This is the second sentence.
+    */
+    ```
+
+30. Constructing Strings with Variables
+- > By using the concatenation operator (+), you can insert one or more variables into a string you're building.
+
+    ```js
+    const myName = "Karan Shah";
+    const myStr = "My name is "+ myName +" and I am well!";
+
+    console.log(myStr);
+
+    /*
+    Output = My name is Karan Shah and I am well!
+    */
+    ```
+
+31. Appending Variables to Strings
+- > Just as we can build a string over multiple lines out of string literals, we can also append variables to a string using the plus equals (+=) operator.
+
+    ```js
+    const someAdjective = "so much awesome.";
+    let myStr = "Learning to code is ";
+    myStr += someAdjective;
+
+    console.log(myStr);
+
+    /*
+    Output = Learning to code is so much awesome.
+    */
+    ```
+32. Find the Length of a String
+- > You can find the length of a String value by writing .length after the string variable or string literal.
+
+    ```js
+    let lastNameLength = 0;
+    const lastName = "Lovelace";
+
+    lastNameLength = lastName.length ;
+
+    console.log(lastName.length);
+    /*
+    Output = gives 8 
+    ```
+
+33. Use Bracket Notation to Find the First Character in a String
+- > Bracket notation is a way to get a character at a specific index within a string.
+- > Most modern programming languages, like JavaScript, don't start counting at 1 like humans do. They start at 0. This is referred to as Zero-based indexing.
+
+    ```js
+    let firstLetterOfLastName = "";
+    const lastName = "Lovelace";
+
+    firstLetterOfLastName = lastName[0]; 
+
+    console.log(firstLetterOfLastName); // Output = L 
+    ```
+
+34. Understand String Immutability
+- > In JavaScript, String values are immutable, which means that they cannot be altered once created.
+
+    ```js
+    // Setup
+    let myStr = "Jello World";
+
+    myStr = "Hello World"; 
+
+    console.log(myStr); // Output = Hello World
+    ```
