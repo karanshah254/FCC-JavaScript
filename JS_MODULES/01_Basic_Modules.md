@@ -354,3 +354,136 @@
 
 35. Use Bracket Notation to Find the Nth Character in a String
 - > You can also use bracket notation to get the character at other positions within a string.
+
+    ```js
+    const lastName = "Code is Love";
+
+    const thirdLetterOfLastName = lastName[2]; 
+
+    console.log(thirdLetterOfLastName); //Output = d
+    ```
+
+36. Use Bracket Notation to Find the Last Character in a String
+- > In order to get the last letter of a string, you can subtract one from the string's length.
+
+    ```js
+    const lastName = "Lovelace";
+
+    const lastLetterOfLastName = lastName[lastName.length - 1]; 
+
+    console.log(lastLetterOfLastName); // Output is 'e'
+    ```
+
+37. Use Bracket Notation to Find the Nth-to-Last Character in a String
+- > You can use the same principle we just used to retrieve the last character in a string to retrieve the Nth-to-last character.
+
+    ```js
+    const lastName = "Lovelace";
+
+    const secondToLastLetterOfLastName = lastName[lastName.length - 2];
+
+    console.log(secondToLastLetterOfLastName);  // Output = 'c'
+    ```
+
+38. Word Blanks
+- > You are provided sentences with some missing words, like nouns, verbs, adjectives and adverbs. You then fill in the missing pieces with words of your choice in a way that the completed sentence makes sense.
+
+    ```js
+    const myNoun = "dog";
+    const myAdjective = "big";
+    const myVerb = "ran";
+    const myAdverb = "quickly";
+
+     wordBlanks = "The " + myAdjective + " " + myNoun +" "+ myVerb +" "+ myAdverb + "." ; 
+
+    console.log(wordBlanks); // Output = The big dog ran quickly.
+    ```
+
+39. Store Multiple Values in one Variable using JavaScript Arrays
+- > With JavaScript "array" variables, we can store several pieces of data in one place.
+
+    ```js
+
+    const myArray = ["Karan",18];
+
+    ```
+
+40. Nest one Array within Another Array
+- > This is also called a multi-dimensional array.
+
+    ```js
+
+    const myArray = [["Karan Shah",25]];
+
+    ```
+
+41. Access Array Data with Indexes
+- > Array indexes are written in the same bracket notation that strings use, except that instead of specifying a character, they are specifying an entry in the array.
+
+    ```js
+    const myArray = [50, 60, 70];
+
+    const myData =  myArray[0];
+
+    console.log(myData); // Output = 50
+    ```
+
+42.Modify Array Data With Indexes
+- > Unlike strings, the entries of arrays are mutable and can be changed freely, even if the array was declared with "const" .
+
+    ```js
+    const myArray = [18, 64, 99];
+
+    myArray[0] = 45;
+
+    console.log(myArray); // Output => [ 45, 64, 99 ] 
+
+    ```
+
+43. Access Multi-Dimensional Arrays With Indexes
+- > One way to think of a multi-dimensional array, is as an array of arrays.
+
+    ```js
+    const myArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [[10, 11, 12], 13, 14],
+    ];
+
+    const myData = myArray[2][1];
+
+    console.log(myData); // Output => 8
+    ```
+
+44. Manipulate Arrays With push Method
+- > An easy way to append data to the end of an array is via the "push()" function.
+- > ".push()" takes one or more parameters and "pushes" them onto the end of the array.
+
+    ```js
+
+    const myArray = [["John", 23], ["cat", 2]];
+
+    myArray.push(["dog",3]);
+
+    console.log(myArray);
+ 
+    // Output = > [ [ 'John', 23 ], [ 'cat', 2 ], [ 'dog', 3 ] ]
+
+    ```
+
+45. Manipulate Arrays With "pop" Method
+- > Another way to change the data in an array is with the .pop() function.
+- > ".pop()" is used to pop a value off of the end of an array.
+
+    ```js
+
+    const myArray = [["John", 23], ["cat", 2]];
+
+    var removedFromMyArray = myArray.pop();
+
+    console.log(removedFromMyArray);  
+
+    // Output = > [ 'cat', 2 ]
+
+    ```
