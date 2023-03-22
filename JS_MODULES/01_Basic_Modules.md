@@ -487,3 +487,32 @@
     // Output = > [ 'cat', 2 ]
 
     ```
+
+46. Manipulate Arrays With shift Method
+- > .shift() is used to remove the first character of string 
+- > The command is [variable_name.shift();]
+
+    ```js
+     myArray = [["John", 23], ["dog", 3]];
+
+    const removedFromMyArray = myArray.shift();
+
+    console.log(myArray);
+
+    // Output = > [ [ 'dog', 3 ] ]
+    ```
+
+47. Manipulate Arrays With unshift Method
+- > ".unshift()" adds the the words at beginning os a string .
+
+    ```js
+    const myArray = [["John", 23], ["dog", 3]];
+    myArray.shift();
+
+    myArray.unshift(["Paul",35]);
+
+    console.log(myArray);
+    
+    // Output = > [ [ 'Paul', 35 ], [ 'dog', 3 ] ] 
+    ```
+
