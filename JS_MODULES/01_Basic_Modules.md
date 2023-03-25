@@ -516,3 +516,52 @@
     // Output = > [ [ 'Paul', 35 ], [ 'dog', 3 ] ] 
     ```
 
+48. Shopping List
+- > Create a shopping list in the variable (myList). The list should be a multi-dimensional array containing several sub-arrays.
+
+    ```js
+    const myList = [["Chocolate",30],["Apple",50],["Banana",50],["Milk",50],["Cereal",50],["Spices",80]];
+
+    console.log(myList);
+
+    /* Output :-
+    [   
+        [ 'Chocolate', 30 ],
+        [ 'Apple', 50 ],
+        [ 'Banana', 50 ],
+        [ 'Milk', 50 ],
+        [ 'Cereal', 50 ],
+        [ 'Spices', 80 ] 
+        
+    ] 
+    */
+    ```
+
+49. Write Reusable JavaScript with Functions
+- > A Basic Example is given below :
+
+    ```js
+    reusableFunction();
+
+    function reusableFunction(){
+        console.log("Hi World");
+    }
+
+    /*
+    Gives output Hi World
+    */
+    ```
+
+50. Passing Values to Functions with Arguments
+- > Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. 
+- > When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or "passed") into a function when it is called are known as arguments.
+
+    ```js
+    function functionWithArgs(a,b)
+    {
+        console.log(a+b);
+    }
+
+    functionWithArgs(1,2); // Output : 3
+    functionWithArgs(7,9); // Output : 16
+    ```
