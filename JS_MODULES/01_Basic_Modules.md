@@ -565,3 +565,19 @@
     functionWithArgs(1,2); // Output : 3
     functionWithArgs(7,9); // Output : 16
     ```
+
+51. Return a Value from a Function with Return
+- > You can use a (return) statement to send a value back out of a function.
+
+    ```js
+    function timesFive(number)
+    {
+        return number * 5;
+    }
+
+    const ans= timesFive(5); 
+    const ans1 = timesFive(2); 
+    const ans2 = timesFive(0); 
+
+    console.log(ans,ans1,ans2); // Output = 25 10 0
+    ```
