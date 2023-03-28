@@ -581,3 +581,34 @@
 
     console.log(ans,ans1,ans2); // Output = 25 10 0
     ```
+
+52. Global Scope and Functions
+- > In JavaScript, scope refers to the visibility of variables. Variables which are defined outside of a function block have Global scope. This means, they can be seen everywhere in your JavaScript code.
+
+    ```js
+    // Declare the myGlobal variable below this line
+    const myGlobal = 10;
+
+    function fun1() 
+    {
+        oopsGlobal =5;
+    }
+
+    function fun2() 
+    {
+        let output = "";
+        if (typeof myGlobal != "undefined") {
+        output += "myGlobal: " + myGlobal;
+    }
+    
+    if (typeof oopsGlobal != "undefined") 
+    {
+        output += " oopsGlobal: " + oopsGlobal;
+    }
+    
+    console.log(output);
+    
+    }
+
+    // Output = [ myGlobal: 10 oopsGlobal: 5 ]
+    ```
