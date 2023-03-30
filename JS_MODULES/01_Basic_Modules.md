@@ -612,3 +612,101 @@
 
     // Output = [ myGlobal: 10 oopsGlobal: 5 ]
     ```
+
+53. Local Scope and Functions
+- > Variables which are declared within a function, as well as the function parameters, have local scope. That means they are only visible within that function.
+
+    ```js
+    function myLocalScope() \
+    {
+        const myVar=5;
+        console.log('inside myLocalScope =', myVar);
+    }
+    
+    myLocalScope();
+
+    // Output = (inside myLocalScope = 5)
+    ```
+
+54. Global vs. Local Scope in Functions
+- > When you do this, the local variable takes precedence over the global variable.
+
+    ```js
+
+    const outerWear = "T-Shirt";
+
+    function myOutfit() 
+    {
+        const outerWear ="sweater" ;
+        return outerWear;
+    }
+
+    myOutfit();
+
+    console.log(myOutfit());  // Now Output will be sweater 
+
+    ```
+
+55. Understanding Undefined Value returned from a Function
+
+    ```js
+    // function without arguments and return value 
+    let sum = 0;
+
+    function addThree() 
+    {
+        sum = sum + 3;
+    }
+
+    function addFive()
+    {
+        sum = sum+ 5 ;
+    }
+
+    addThree();
+    addFive();
+
+    ```
+
+56. Assignment with a Returned Value
+
+    ```js
+
+    let processed = 0;
+
+    function processArg(num) 
+    {
+        return (num + 3) / 5;
+    }
+
+    processed = processArg(7);  
+    // Assigned value of func. processArg to variable processed .
+
+    console.log(processArg(7)); // Gives output [(7+3)/5] = 2
+
+    ```
+
+57. Stand in Line
+- > In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
+
+    ```js
+    function nextInLine(arr, item) 
+    {
+        arr.push(item);
+        return arr.shift(); 
+    }
+
+    let testArr = [1, 2, 3, 4, 5];
+
+    // Display code
+    console.log("Before: " + JSON.stringify(testArr));
+    console.log(nextInLine(testArr, 6));
+    console.log("After: " + JSON.stringify(testArr));
+
+    /*
+    Output :- 
+    Before: [1,2,3,4,5]
+    1
+    After: [2,3,4,5,6]
+    */
+    ```
