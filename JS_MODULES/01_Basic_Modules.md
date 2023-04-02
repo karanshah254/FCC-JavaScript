@@ -710,3 +710,53 @@
     After: [2,3,4,5,6]
     */
     ```
+
+58. Understanding Boolean Values
+
+    ```js
+
+    function welcomeToBooleans() 
+    {
+        return true; // Gives Output as a True .
+    }
+
+    ```
+
+59. Use Conditional Logic with If Statements
+
+    ```js
+    
+    function trueOrFalse(wasThatTrue) 
+    {
+        if(wasThatTrue)
+        {
+            return "Yes, that was true" ;
+        }
+  
+        return "No, that was false" ;
+    }
+
+    console.log(trueOrFalse(true)); // Yes, that was true
+    console.log(trueOrFalse(false)); // No, that was false
+
+    ```
+
+60. Comparison with the Equality Operator
+
+    ```js
+    
+    function testEqual(val) 
+    {
+        if (val == 12) 
+    { 
+        return "Equal";
+    }
+        
+        return "Not Equal";
+    }
+
+    console.log(testEqual(10));
+    // Output is "Not Equal"
+
+    ```
+    
