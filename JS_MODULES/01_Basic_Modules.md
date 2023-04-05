@@ -759,4 +759,107 @@
     // Output is "Not Equal"
 
     ```
-    
+
+61. Comparison with the Strict Equality Operator
+- > Strict equality (===) is the counterpart to the equality operator (==). However, unlike the equality operator, which attempts to convert both values being compared to a common type, the strict equality operator does not perform a type conversion.
+
+    ```js
+    // Use of ( === ) operator :
+
+    function testStrict(val) 
+    {
+        if (val===7) 
+        { 
+            return "Equal";
+        }
+        
+        return "Not Equal";
+    }
+
+    testStrict(10);
+    testStrict("7");
+    testStrict(7);
+
+    console.log(testStrict(10)); // Output is Not Equal 
+    console.log(testStrict("7")); // Output is Not Equal
+    console.log(testStrict(7)); // Output is Equal
+
+    ```
+
+62. Practice comparing different values
+- > Here we will use both (==) & (===) operator .
+
+    ```js
+    // Using ( == ) operator  :
+
+    function compare(a,b)
+    {
+        if(a==b)
+        {
+            return "Equal";
+        }
+        return "Not Equal";
+
+        console.log(compare(10,"10")); // Output is "Equal"
+
+    }
+    ```
+
+    ```js
+    // Using (===) operator :
+
+    function compare(a,b)
+    {
+        if(a===b)
+        {
+            return "Equal" ;
+        }
+        return "Not Equal" ;
+
+        console.log(compare(10,"10")); // Output is "Not Equal"
+
+    }
+    ```
+
+63. Comparison with the Inequality Operator
+- > Now comes Inequality opreator (!=) which means not equal to...
+
+    ```js
+    // USe of ( != ) operator :
+
+    function notEqual(value)
+    {
+        if(value != 99)
+        {
+            return "Not Equal" ;
+        }
+        return "Equal" ;
+
+        console.log(notEqual(99)); // Output Equal
+        console.log(notEqual("99")); // Output Equal
+        console.log(notEqual("55")); // Output is Not Equal
+        console.log(notEqual("Karan")); // Output is Not Equal
+
+    }
+    ```
+
+64. Comparison with the Strict Inequality Operator
+- > Now Comes Strict Inequality operatot (!==) .
+
+    ```js
+    // USe of ( !== ) operator :
+
+    function strictNotEqual(value)
+    {
+        if(value !== 100)
+        {
+            return "Not Equal" ;
+        }
+        return "Equal" ;
+
+        console.log(strictNotEqual(100)); // Output is  Equal
+        console.log(strictNotEqual("100")); // Output is Not Equal
+        console.log(strictNotEqual("Karan")); // Output is Not Equal
+
+    }
+    ```
