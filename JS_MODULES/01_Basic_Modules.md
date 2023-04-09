@@ -863,3 +863,261 @@
 
     }
     ```
+
+65. Comparison with the Greater Than Operator
+- > Use of (>) operator .
+    ```js
+    Examples
+
+    5   >  3  // true
+    7   > '3' // true
+    2   >  3  // false
+    '1' >  9  // false
+    ```
+
+    ```js
+    // Use of (>) operator :
+
+    function testGreater(val)
+    {
+        if(val > 100)
+        {
+            return "Over 100" ;
+        }
+        if(val > 10)
+        {
+            return "Over 10" ;
+        }
+
+        return "10 or under" ;
+    }
+
+    console.log(testGreaterThan(10)); // 10 or Under
+    console.log(testGreaterThan(0)); // 10 or Under
+    console.log(testGreaterThan(11)); // Over 10
+    console.log(testGreaterThan(99)); // Over 10
+    console.log(testGreaterThan(100)); // Over 10
+    console.log(testGreaterThan(101)); // Over 100
+    console.log(testGreaterThan(150)); // Over 100
+
+    ```
+
+66. Comparison with the Greater Than Or Equal To Operator
+- > Use of (>=) operator 
+
+    ```js
+    // Use of (>=) operator :
+
+    function testGreaterEqual(val)
+    {
+        if(val >= 20)
+        {
+            return "20 or Over" ;
+        }
+        if(val >= 10)
+        {
+            return "10 or Over" ;
+        }
+
+        return "Less than 10" ;
+    }
+
+    console.log(testGreaterOrEqual(10)); // 10 or Over
+    console.log(testGreaterOrEqual(0)); // Less than 10
+    console.log(testGreaterOrEqual(9)); // Less than 10
+    console.log(testGreaterOrEqual(11)); // 10 or Over
+    console.log(testGreaterOrEqual(19)); // 10 or Over
+    console.log(testGreaterOrEqual(100)); // 20 or Over
+    console.log(testGreaterOrEqual(21)); // 20 or Over
+
+    ```
+
+67. Comparison with the Less Than Operator
+- > Use of (<) operator .
+
+    ```js
+
+    function testLessThan(val) 
+    {
+        if (val<25) 
+        {  
+            return "Under 25";
+        }
+
+        if (val<55) 
+        {  
+            return "Under 55";
+        }
+
+        return "55 or Over";
+    }
+
+    console.log(testLessThan(10)); // Under 25
+    console.log(testLessThan(0)); // Under 25
+    console.log(testLessThan(24)); // Under 25
+    console.log(testLessThan(25)); // Under 55
+    console.log(testLessThan(54)); // Under 55
+    console.log(testLessThan(55)); // 55 or Over
+    console.log(testLessThan(99)); // 55 or Over
+
+    ```
+
+68. Comparison with the Less Than Or Equal To Operator
+- > Use of (<=) operator .
+
+    ```js
+    function testLessOrEqual(val) 
+    {
+        if (val<=12) 
+        {  
+            return "Smaller Than or Equal to 12";
+        }
+
+        if (val<=24) 
+        {  
+            return "Smaller Than or Equal to 24";
+        }
+
+        return "More Than 24";
+    }
+
+    console.log(testLessOrEqual(10)); // Smaller Than or Equal to 12
+    console.log(testLessOrEqual(0)); // Smaller Than or Equal to 12
+    console.log(testLessOrEqual(12)); // Smaller Than or Equal to 12
+    console.log(testLessOrEqual(23)); // Smaller Than or Equal to 24
+    console.log(testLessOrEqual(24)); // Smaller Than or Equal to 24
+    console.log(testLessOrEqual(11)); // Smaller Than or Equal to 12
+    console.log(testLessOrEqual(25)); // More Than 24
+    console.log(testLessOrEqual(55)); // More Than 24
+    ```
+
+69. Comparisons with the Logical And Operator
+- > Use of (&&) operator .
+
+    ```js
+
+    function testLogicalAnd(val) 
+    {
+        if (val <= 50 && val >= 25) 
+        {
+            return "Yes";
+    
+        }
+        return "No";
+    }
+
+    console.log(testLogicalAnd(10)); // No
+    console.log(testLogicalAnd(0)); // No
+    console.log(testLogicalAnd(24)); // No
+    console.log(testLogicalAnd(25)); // Yes
+    console.log(testLogicalAnd(30)); // Yes 
+    console.log(testLogicalAnd(50)); // Yes
+
+    ```
+
+70. Comparisons with the Logical Or Operator
+- > Use of (||) operator .
+
+    ```js
+    // Use of (||) operator : 
+    function testLogicalOr(val) 
+    {
+        if (val<10 || val >20) 
+        {
+            return "Outside";
+        }
+
+        return "Inside";
+    }
+
+    console.log(testLogicalOr(15)); // Inside
+    console.log(testLogicalOr(0)); // Outside
+    console.log(testLogicalOr(9)); // Outside
+    console.log(testLogicalOr(10)); // Inside
+    console.log(testLogicalOr(15)); // Inside
+    console.log(testLogicalOr(21)); // Outside
+    console.log(testLogicalOr(25)); // Outside
+    ```
+
+71. Introducing Else Statements
+- > else statement is used to when given condition doesn't satisfy the test condition .
+
+    ```js
+    // Use of (||) operator : 
+    function testElse(val) 
+    {
+        let result = "";
+
+        if (val > 5) 
+        {
+            result = "Bigger than 5";
+        }
+        else 
+        {
+            result = "5 or Smaller";
+        }
+
+        return result;
+    }
+
+    console.log(testElse(4)); // 5 or Smaller 
+    console.log(testElse(5)); // 5 or Smaller 
+    console.log(testElse(6)); // Bigger than 5
+    console.log(testElse(10)); // Bigger than 5
+
+    ```
+
+72. Introducing Else If Statements
+
+    ```js
+
+    function testElseIf(val) 
+    {
+        if (val > 10) 
+        {
+            return "Greater than 10";
+        }
+        else if (val < 5) 
+        {
+            return "Smaller than 5";
+        }
+        else
+        {
+            return "Between 5 and 10";
+        }
+    }
+
+
+    console.log(testElseIf(0)); // Smaller than 5 
+    console.log(testElseIf(5)); // Between 5 and 10
+    console.log(testElseIf(7)); // Between 5 and 10
+    console.log(testElseIf(10)); // Between 5 and 10
+    console.log(testElseIf(12)); // Greater than 10
+
+    ```
+
+73. Logical Order in If Else Statements
+
+    ```js
+    
+    function orderMyLogic(val) 
+    {
+        if (val < 5 ) 
+        {
+            return "Less than 5";
+        }
+         else if (val < 10) 
+        {
+            return "Less than 10";
+        } 
+        else 
+        {
+            return "Greater than or equal to 10";
+        }
+    }
+
+    console.log(orderMyLogic(4)); // Less than 5
+    console.log(orderMyLogic(6)); // Less than 10
+    console.log(orderMyLogic(11)); // Greater than or equal to 10
+
+    ```
