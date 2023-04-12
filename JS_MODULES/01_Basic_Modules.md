@@ -1121,3 +1121,88 @@
     console.log(orderMyLogic(11)); // Greater than or equal to 10
 
     ```
+
+74. Chaining If Else Statements
+
+    ```js
+    function testSize(num) 
+    {
+        if(num < 5)
+        {
+            return "Tiny" ;
+        }
+        else if(num<10)
+        {
+            return "Small" ;
+        }
+        else if(num<15)
+        {
+            return "Medium" ;
+        }
+        else if(num <20)
+        {
+            return "Large" ;
+        }
+        else
+        {
+            return "Huge" ;
+        }
+    }
+
+    console.log(testSize(0)); // Tiny
+    console.log(testSize(5)); // Small
+    console.log(testSize(10)); // Medium
+    console.log(testSize(17)); // Large
+    console.log(testSize(20)); // Huge
+    ```
+
+75. Golf Code
+
+    ```js
+    /*Strokes	Return
+    1	        "Hole-in-one!"
+    <= par-2	"Eagle"
+    par - 1	    "Birdie"
+    par	        "Par"
+    par + 1	    "Bogey"
+    par + 2	    "Double Bogey"
+    >= par + 3	"Go Home!"
+    */
+    ```
+
+    ```js
+    var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+    function golfScore(par, strokes) 
+    {
+        if (strokes == 1) 
+            {
+            return names[0]
+        } 
+        else if (strokes <= par - 2) 
+        {
+            return names[1]
+        } 
+        else if (strokes == par - 1) 
+        {
+            return names[2]
+        } 
+        else if (strokes == par) 
+        {
+            return names[3]
+        }
+        else if (strokes == par + 1) 
+        {
+            return names[4]
+        } 
+        else if (strokes == par + 2) 
+        {
+            return names[5]
+        } 
+        else if (strokes >= par + 3) 
+        {
+            return names[6]
+        }
+    }
+
+    console.log(golfScore(5, 4)); // Output is Birdie
+    ```
