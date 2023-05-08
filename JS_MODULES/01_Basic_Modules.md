@@ -1231,3 +1231,72 @@
     console.log(caseInSwitch(4));
 
     ```
+
+77. Adding a Default Option in Switch Statements
+
+    ```js
+
+    function switchOfStuff(val) 
+    {
+        var answer = "";
+  // Only change code below this line
+
+        switch(val)
+        {
+            case "a" : answer = "apple" ; break;
+            case "b" : answer = "bird" ; break;
+            case "c" : answer = "cat" ; break;
+
+            default : answer = "stuff" ; break;
+
+        }
+
+        return answer;
+
+    }
+
+    console.log(switchOfStuff("a")); // Output is apple
+    console.log(switchOfStuff("b")); // Output is bird 
+    console.log(switchOfStuff("c")); // Output is cat
+    console.log(switchOfStuff("d")); // Output is stuff 
+    console.log(switchOfStuff(4)); // Output is stuff
+
+    ```
+
+78. Multiple Identical Options in Switch Statements
+
+    ```js
+
+    function sequentialSizes(val) 
+    {
+        var answer = "";
+
+        switch(val)
+        {
+            case 1:
+            case 2:
+            case 3: answer ="Low" ;
+                    break;
+
+            case 4:
+            case 5:
+            case 6: answer ="Mid" ;
+                    break;
+
+            case 7:
+            case 8:
+            case 9: answer ="High" ;
+                    break;
+        }
+
+        return answer;
+    }
+
+    console.log(sequentialSizes(1)); // Output is Low
+    console.log(sequentialSizes(2)); // Output is Low
+    console.log(sequentialSizes(5)); // Output is Mid
+    console.log(sequentialSizes(4)); // Output is Mid
+    console.log(sequentialSizes(8)); // Output is High
+    console.log(sequentialSizes(9)); // Output is High
+    
+    ```
