@@ -1300,3 +1300,46 @@
     console.log(sequentialSizes(9)); // Output is High
     
     ```
+
+79. Replacing If Else Chains with Switch
+
+    ```js
+    function if_else_to_switch(val)
+    {
+        var answer = "" ;
+        if(val == 1)
+        {
+            answer = 1 ;
+        }
+        else if(val == 99)
+        {
+            answer = 99 ;
+        }
+
+        return answer ;
+    }
+
+    console.log(if_else_to_switch(99)) ; // Outptu is 99 
+
+    // Same Problem with Switch 
+
+    function if_else_to_switch(val)
+    {
+        var answer = "" ;
+
+        switch(val)
+        {
+            case 1 : answer = 1 ; break ;
+
+            case 99 : answer = 99 ; break ;
+
+            default : answer = "Karan" ; break ;
+        }
+
+        return answer ;
+    }
+
+    console.log(if_else_to_switch(99)) ; // Output is 99
+    console.log(if_else_to_switch(150)) ; // Output is Karan
+
+    ```
