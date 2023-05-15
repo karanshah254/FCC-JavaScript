@@ -1420,3 +1420,15 @@
     console.log(cc(10));  // Return "0 Hold"
 
     ```
+
+83. Build JavaScript Objects
+
+    ```js
+
+    const myName = {
+            "name" : "Karan" ,
+            "Height" : "5ft 10inch" ,
+            "About" : "Programmer & Learner" ,
+    };
+
+    ```
