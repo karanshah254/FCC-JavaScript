@@ -1432,3 +1432,40 @@
     };
 
     ```
+
+84. Accessing Object Properties with Dot Notation
+- > There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
+
+    ```js
+    Example :
+
+    const myObj = {
+        prop1: "Value 1",
+        prop2: "Value 2"
+    };
+
+    const prop1val = myObj.prop1;
+    const prop2val = myObj.prop2;
+
+    console.log(prop1val) ; // Output is Value 1
+    console.log(prop2val) ;  // Output is Value 2
+
+    ```
+
+    ```js
+
+    // Setup
+    const testObj = {
+        "hat": "ballcap",
+        "shirt": "jersey",
+        "shoes": "cleats"
+    };
+
+    const hatValue = testObj.hat;      
+    const shirtValue = testObj.shirt;
+
+    console.log(hatValue); // Output is ballcap
+    console.log(shirtValue); // Output is jersey
+
+
+    ```
