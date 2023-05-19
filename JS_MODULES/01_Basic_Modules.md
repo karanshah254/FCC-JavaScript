@@ -1437,6 +1437,7 @@
 - > There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
 
     ```js
+
     Example :
 
     const myObj = {
@@ -1467,5 +1468,22 @@
     console.log(hatValue); // Output is ballcap
     console.log(shirtValue); // Output is jersey
 
+    ```
+
+85. Accessing Object Properties with Bracket Notation
+
+    ```js
+
+    const testObj = {
+        "an entree": "hamburger",
+        "my side": "veggies",
+        "the drink": "water"
+    };
+
+    const entreeValue = testObj["an entree"];   // Change this line
+    const drinkValue = testObj["the drink"];    // Change this line
+
+    console.log(entreeValue); // Output is hamburger
+    console.log(drinkValue); // Output is water
 
     ```
