@@ -1487,3 +1487,240 @@
     console.log(drinkValue); // Output is water
 
     ```
+
+86. Accessing Object Properties with Variables
+
+    ```js
+
+    const testObj = {
+        12: "Namath",
+        16: "Montana",
+        19: "Unitas"
+    };
+
+    const playerNumber = 16;  
+    const player = testObj[playerNumber];   
+    console.log(player);
+
+    ```
+
+87. Updating Object Properties
+
+    ```js
+    
+    const myDog = {
+        "name": "Coder",
+        "legs": 4,
+        "tails": 1,
+        "friends": ["freeCodeCamp Campers"]
+    };
+
+    myDog.name = "Happy Coder" ;
+    console.log(myDog.name) ; // Now it prints Happy Coder instead of Coder 
+
+    ```
+
+88. Add New Properties to a JavaScript Object
+
+    ```js
+
+    const myDog = {
+        "name": "Happy Coder",
+        "legs": 4,
+        "tails": 1,
+        "friends": ["freeCodeCamp Campers"]
+    };
+
+    myDog.bark = "woof" ; // added new property
+    console.log(myDog.bark); // Prints woof 
+
+    ```
+
+89. Delete Properties from a JavaScript Object
+
+    ```js
+
+    const myDog = {
+        "name": "Happy Coder",
+        "legs": 4,
+        "tails": 1,
+        "friends": ["freeCodeCamp Campers"],
+        "bark": "woof"
+    };
+
+    delete myDog.tails ; // deletes tails property from above
+
+    ```
+
+90. Using Objects for Lookups
+
+    ```js
+
+    function phoneticLookup(val) {
+    let result = "";
+
+    const lookup = {
+        "alpha": "Adams",
+
+        "bravo" : "Boston",
+
+        "charlie" : "Chicago",
+
+        "delta" : "Denver",
+
+        "echo" : "Easy",
+
+        "foxtrot" : "Frank",
+    };
+
+    result = lookup[val];
+
+    return result;
+    }
+    console.log(phoneticLookup("charlie")); // Chicago
+
+    ```
+
+91. Testing Objects for Properties
+
+    ```js
+
+    function checkObj(obj, checkProp) {
+        if (obj.hasOwnProperty(checkProp)) 
+        {
+            return obj[checkProp];
+        } 
+        else 
+        {
+            return "Not Found";
+        }
+    }
+    
+    console.log(checkObj({gift: "pony", pet: "kitten", bed: "sleigh"},"gift")) ; // Return pony
+
+    ```
+
+93. Manipulating Complex Objects
+
+    ```js
+
+    const myMusic = [
+    {
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": 1973,
+        "formats": [
+            "CD",
+            "8T",
+            "LP"
+        ],
+        "gold": true
+    },
+
+    { 
+        // New Added 
+        "artist" : "Karan Shah",
+        "title" : "Guitar MAn",
+        "release_year" : 2004 ,
+        "formats": [
+            "CD",
+            "8T",
+            "LP"
+        ],
+        "gold": "true" 
+    }
+    ];
+
+    ```
+
+94. Accessing Nested Objects
+
+    ```js
+
+    const myStorage = {
+        "car": {
+            "inside": {
+                "glove box": "maps",
+                "passenger seat": "crumbs"
+            },
+            "outside": {
+            "trunk": "jack"
+            }
+        }
+    };
+
+    const gloveBoxContents = myStorage.car.inside["glove box"];
+
+    console.log(gloveBoxContents); // Print MAps
+
+    ```
+
+95. Accessing Nested Arrays
+
+    ```js
+
+    const myPlants = [
+    {
+        type: "flowers",
+        list: [
+            "rose",
+            "tulip",
+            "dandelion"
+        ]
+    },
+    {
+        type: "trees",
+        list: [
+            "fir",
+            "pine",
+            "birch"
+        ]
+    }
+    
+    ];
+
+    const secondTree = myPlants[1].list[1];
+
+    console.log(secondTree);
+
+    ```
+
+96. Record Collection
+
+    ```js
+
+    const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+    };
+
+    function updateRecords(records, id, prop, value) {
+    if (value === '') {
+    delete records[id][prop];
+  } else if (prop === "tracks") {
+    records[id][prop] = records[id][prop] || []; // shortcircuit evaluation
+    records[id][prop].push(value);
+  } else {
+    records[id][prop] = value;
+  }
+  return records;
+    }
+
+    updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+
+    ```
