@@ -1768,7 +1768,7 @@
 
     ```js
 
-    const myArray =[]
+    const myArray = [];
 
     let i;
 
@@ -1785,7 +1785,7 @@
 
     ```js
 
-    const myArray = []
+    const myArray = [];
 
     let i;
     for(int i=9;i>=1;i-=2)
@@ -1808,7 +1808,6 @@
     for(let i=0;i< myArr.length;i++)
     {
         total = total + myArr[i] ;
-
     }
 
     console.log(total); // Prints 20
@@ -1832,8 +1831,7 @@
     return product;
     }
 
-    console.log(multiplyAll([[1, 2], [3, 4], [5, 6, 7]])); 
-    // Prints 5040
+    console.log(multiplyAll([[1, 2], [3, 4], [5, 6, 7]])); // Prints 5040
 
     ```
 
@@ -1847,7 +1845,7 @@
     do{
          myArray.push(i);
         i++;
-    }while(i<10)
+    }while(i<10);
 
     ```
 
@@ -1855,16 +1853,17 @@
 
     ```js
 
-    function sum(arr, n) {
+    function sum(arr, n) 
+    {
   
-    if(n <= 0) 
-    {
-        return 0;
-    } 
-    else 
-    {
-        return sum(arr, n - 1) + arr[n - 1];
-    }
+        if(n <= 0) 
+        {
+            return 0;
+        } 
+        else 
+        {
+            return sum(arr, n - 1) + arr[n - 1];
+        }   
   
     }
 
@@ -1874,48 +1873,51 @@
 
     ```js
 
-    const contacts = [
-    {
-        firstName: "Akira",
-        lastName: "Laine",
-        number: "0543236543",
-        likes: ["Pizza", "Coding", "Brownie Points"],
-    },
-    {
-        firstName: "Harry",
-        lastName: "Potter",
-        number: "0994372684",
-        likes: ["Hogwarts", "Magic", "Hagrid"],
-    },
-    {
-        firstName: "Sherlock",
-        lastName: "Holmes",
-        number: "0487345643",
-        likes: ["Intriguing Cases", "Violin"],
-    },
-    {
-        firstName: "Kristian",
-        lastName: "Vos",
-        number: "unknown",
-        likes: ["JavaScript", "Gaming", "Foxes"],
-    },
+    const contacts = 
+    [
+        {
+            firstName: "Akira",
+            lastName: "Laine",
+            number: "0543236543",
+            likes: ["Pizza", "Coding", "Brownie Points"],
+        },
+        {
+            firstName: "Harry",
+            lastName: "Potter",
+            number: "0994372684",
+            likes: ["Hogwarts", "Magic", "Hagrid"],
+        },
+        {
+            firstName: "Sherlock",
+            lastName: "Holmes",
+            number: "0487345643",
+            likes: ["Intriguing Cases", "Violin"],
+        },
+        {
+            firstName: "Kristian",
+            lastName: "Vos",
+            number: "unknown",
+            likes: ["JavaScript", "Gaming", "Foxes"],
+        },
     ];
 
-    function lookUpProfile(name, prop) {
-        for (let x = 0; x < contacts.length; x-++) {
-        if (contacts[x].firstName === name) {
-            if (contacts[x].hasOwnProperty(prop)) 
+    function lookUpProfile(name, prop) 
+    {
+        for (let x = 0; x < contacts.length; x-++) 
+        {
+            if (contacts[x].firstName === name) 
             {
-                return contacts[x][prop];
-            } 
-            else 
-            {
-                return "No such property";
+                if (contacts[x].hasOwnProperty(prop)) 
+                {
+                    return contacts[x][prop];
+                } 
+                else 
+                {
+                    return "No such property";
+                }
             }
         }
-    }
-    return "No such contact";
-
+        return "No such contact";
     }
 
     lookUpProfile("Akira", "likes");
@@ -1926,15 +1928,16 @@
 
     ```js
 
-    function randomFraction() {
+    function randomFraction() 
+    {
 
-    var result = 0;
-    while (result === 0) {
-        result = Math.random();
-    }
+        var result = 0;
+        while (result === 0) 
+        {
+            result = Math.random();
+        }
 
-    return result;
-    return 0;
+        return result;
 
     }
 
@@ -1946,7 +1949,8 @@
 
     var randomNumberBetween0and19 = Math.floor(Math.random() * 10);
 
-    function randomWholeNum() {
+    function randomWholeNum() 
+    {
         return Math.floor(Math.random() * 10);
     }
 
@@ -1958,12 +1962,12 @@
 
     ```js
 
-    function randomRange(myMin, myMax) {
+    function randomRange(myMin, myMax) 
+    {
         return Math.floor(Math.random()* (myMax - myMin + 1)) + myMin;
     }
 
-    console.log(randomRange(5,25)); 
-    // Prints random number betw 5 to 25 
+    console.log(randomRange(5,25));  // Prints random number betw 5 to 25 
 
     ```
 
@@ -1977,6 +1981,7 @@
     }
 
     console.log(convertToInteger("56")); // returns 56
+
     console.log(convertToInteger("Karan Shah")); // returns Nan
 
     ```
@@ -1990,7 +1995,7 @@
         return parseInt(str,2);
     }
 
-    console.log(convertToInteger("10011")); // eturns 19
+    console.log(convertToInteger("10011")); // returns 19
 
     ```
 
@@ -2017,6 +2022,7 @@
     }
 
     console.log(checkSign(10)); // postive
+
     console.log(checkSign(-12)); // negative
 
     ```
@@ -2025,18 +2031,19 @@
 
     ```js
 
-    function countdown(n){
+    function countdown(n)
+    {
 
-    if(n<1)
-    {
-        return [];
-    }
-    else
-    {
-        const countArray = countdown(n-1) ;
-        countArray.unshift(n);
-        return countArray;
-    }
+        if(n<1)
+        {
+            return [];
+        }
+        else
+        {
+            const countArray = countdown(n-1) ;
+            countArray.unshift(n);
+            return countArray;
+        }
 
     }
 
