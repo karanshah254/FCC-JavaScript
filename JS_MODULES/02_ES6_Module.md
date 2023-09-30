@@ -68,3 +68,25 @@
 
     // prints [1,2,3,4,5] after concatation .
     ```
+
+6. Set default parameters for your functions
+
+    ```js
+    const increment = (number, value = 1) => number + value;
+    console.log(increment(5,2)); // gives 7
+    ```
+
+7. Use the rest parameter with function paramater
+
+    ```js
+    const sum = (...args) =>{
+        let total = 0;
+
+        for(let i=o; i<args.length; i++)
+        {
+            total += args[i];
+        }
+        return total;
+    }
+    console.log(sum(0,1,2));  // Output is 3
+    ```
