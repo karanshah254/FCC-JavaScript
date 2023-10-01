@@ -90,3 +90,45 @@
     }
     console.log(sum(0,1,2));  // Output is 3
     ```
+
+8. Use the spread opeator to evaluate array in place
+
+    ```js
+    const arr1 = [1,2,3];
+
+    const spread = [...arr1];
+
+    console.log(spread);  // Prints [1,2,3]
+    ```
+
+9. Use Destructuring Assignment to Extract Values from Objects
+
+    ```js
+    const HIGH_TEMPERATURES = {
+        yesterday: 75,
+        today: 77,
+        tomorrow: 80
+    };
+
+    const {today , tomorrow} = HIGH_TEMPERATURES;   
+    // Here's an equivalent assignment statement using the ES6 destructuring syntax:
+
+    console.log({today,tomorrow});  
+    // prints { today: 77, tomorrow: 80 }
+    ```
+
+10. Use Destructuring Assignment to Assign Variables from Objects
+
+    ```js
+    const HIGH_TEMPERATURES = {
+        yesterday: 75,
+        today: 77,
+        tomorrow: 80
+    };
+
+    const {today : highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES;
+    // Here's how you can give new variable names in the assignment
+
+    console.log({today : highToday, tomorrow: highTomorrow});
+    // { today: 77, tomorrow: 80 }
+    ```
