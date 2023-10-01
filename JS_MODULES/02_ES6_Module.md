@@ -132,3 +132,63 @@
     console.log({today : highToday, tomorrow: highTomorrow});
     // { today: 77, tomorrow: 80 }
     ```
+
+11. Use Destructuring Assignment to Assign Variables from Nested Objects
+
+    ```js
+    const LOCAL_FORECAST = {
+        yesterday: { low: 61, high: 75 },
+        today: { low: 64, high: 77 },
+        tomorrow: { low: 68, high: 80 }
+    };
+  
+    const {today:{low: lowToday, high:highToday}} = LOCAL_FORECAST;
+    // here's how you can assign an object properties' values to variables with different names
+
+    console.log({today: {low: lowToday, high:highToday}});
+    // { today: { low: 64, high: 77 } }
+    ```
+
+12. Use Destructuring Assignment to Assign Variables from Arrays
+
+    ```js
+    let a = 8, b = 6;
+    [a,b] =[b,a];
+    //swap a with b and b with a
+
+    console.log([a,b]);
+    // [6,8]
+    ```
+
+13. Destructuring via rest elements
+
+    ```js
+    function removeFirstTwo(list) {
+        const [a,b,...shorterlist] = list;  
+        // removes 1st and 2nd number from source 
+
+        return shorterlist;
+    }
+
+    const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const sourceWithoutFirstTwo = removeFirstTwo(source);
+
+    console.log(sourceWithoutFirstTwo);
+    // prints [ 3, 4, 5, 6, 7, 8, 9, 10 ]
+    ```
+
+14. Use Destructuring Assignment to Pass an Object as a Function's Parameters
+
+    ```js
+    const stats = {
+        max: 56.78,
+        standard_deviation: 4.34,
+        median: 34.54,
+        mode: 23.87,
+        min: -0.75,
+        average: 35.85
+    };
+
+    const half = ({ max, min}) => (max + min) / 2.0; 
+    // answer is 28.015
+    ```
