@@ -1,4 +1,4 @@
-## ES6 Module / ECMAScript
+## ES6 Module / ECMAScript 6 
 
 1. Difference between var and let
 
