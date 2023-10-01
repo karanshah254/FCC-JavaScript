@@ -190,5 +190,6 @@
     };
 
     const half = ({ max, min}) => (max + min) / 2.0; 
+    console.log(half(stats));
     // answer is 28.015
     ```
