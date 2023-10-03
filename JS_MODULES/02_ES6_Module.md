@@ -193,3 +193,56 @@
     console.log(half(stats));
     // answer is 28.015
     ```
+
+15. Create String Using Template Literals
+
+    ```js
+    const result = {
+        success: ["max-length", "no-amd", "prefer-arrow-functions"],
+        failure: ["no-var", "var-on-top", "linebreak"],
+        skipped: ["no-extra-semi", "no-dup-keys"]
+    };
+    function makeList(arr) {
+   
+    const failureItems = [];
+    for (let i = 0; i < arr.length; i++) {
+        failureItems.push(`<li class="text-warning">${arr[i]}</li>`);
+    }
+
+    return failureItems;
+    }
+    const failuresList = makeList(result.failure);
+
+    console.log(failuresList);
+    /* Output :
+    [
+        '<li class="text-warning">no-var</li>',
+        '<li class="text-warning">var-on-top</li>',
+        '<li class="text-warning">linebreak</li>'
+    ]
+    */
+    ```
+
+16. Write Concise Object Literal Declarations Using Object Property Shorthand
+
+    ```js
+    const  createPerson(name,age,gender) => ({name,age,gender});
+    const display = createPerson("Karan Shah", 19, "male");
+
+    console.log(display);
+    // { name: 'Karan Shah', age: 56, gender: 'male' }
+    ```
+
+17. Write Concise Declarative Functions with ES6
+
+    ```js
+    const bicycle = {
+        gear: 48,
+        setGear(newGear)  {
+            "use strict";
+            this.gear = newGear;
+        }
+    };
+    bicycle.setGear(48);
+    console.log(bicycle.gear);   // 48
+    ```
