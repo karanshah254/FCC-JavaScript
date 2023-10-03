@@ -230,7 +230,7 @@
     const display = createPerson("Karan Shah", 19, "male");
 
     console.log(display);
-    // { name: 'Karan Shah', age: 56, gender: 'male' }
+    // { name: 'Karan Shah', age: 19, gender: 'male' }
     ```
 
 17. Write Concise Declarative Functions with ES6
