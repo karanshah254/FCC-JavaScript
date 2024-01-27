@@ -1487,3 +1487,588 @@
     console.log(drinkValue); // Output is water
 
     ```
+
+86. Accessing Object Properties with Variables
+
+    ```js
+
+    const testObj = {
+        12: "Namath",
+        16: "Montana",
+        19: "Unitas"
+    };
+
+    const playerNumber = 16;  
+    const player = testObj[playerNumber];   
+    console.log(player);
+
+    ```
+
+87. Updating Object Properties
+
+    ```js
+    
+    const myDog = {
+        "name": "Coder",
+        "legs": 4,
+        "tails": 1,
+        "friends": ["freeCodeCamp Campers"]
+    };
+
+    myDog.name = "Happy Coder" ;
+    console.log(myDog.name) ; // Now it prints Happy Coder instead of Coder 
+
+    ```
+
+88. Add New Properties to a JavaScript Object
+
+    ```js
+
+    const myDog = {
+        "name": "Happy Coder",
+        "legs": 4,
+        "tails": 1,
+        "friends": ["freeCodeCamp Campers"]
+    };
+
+    myDog.bark = "woof" ; // added new property
+    console.log(myDog.bark); // Prints woof 
+
+    ```
+
+89. Delete Properties from a JavaScript Object
+
+    ```js
+
+    const myDog = {
+        "name": "Happy Coder",
+        "legs": 4,
+        "tails": 1,
+        "friends": ["freeCodeCamp Campers"],
+        "bark": "woof"
+    };
+
+    delete myDog.tails ; // deletes tails property from above
+
+    ```
+
+90. Using Objects for Lookups
+
+    ```js
+
+    function phoneticLookup(val) {
+    let result = "";
+
+    const lookup = {
+        "alpha": "Adams",
+
+        "bravo" : "Boston",
+
+        "charlie" : "Chicago",
+
+        "delta" : "Denver",
+
+        "echo" : "Easy",
+
+        "foxtrot" : "Frank",
+    };
+
+    result = lookup[val];
+
+    return result;
+    }
+    console.log(phoneticLookup("charlie")); // Chicago
+
+    ```
+
+91. Testing Objects for Properties
+
+    ```js
+
+    function checkObj(obj, checkProp) {
+        if (obj.hasOwnProperty(checkProp)) 
+        {
+            return obj[checkProp];
+        } 
+        else 
+        {
+            return "Not Found";
+        }
+    }
+    
+    console.log(checkObj({gift: "pony", pet: "kitten", bed: "sleigh"},"gift")) ; // Return pony
+
+    ```
+
+93. Manipulating Complex Objects
+
+    ```js
+
+    const myMusic = [
+    {
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": 1973,
+        "formats": [
+            "CD",
+            "8T",
+            "LP"
+        ],
+        "gold": true
+    },
+
+    { 
+        // New Added 
+        "artist" : "Karan Shah",
+        "title" : "Guitar MAn",
+        "release_year" : 2004 ,
+        "formats": [
+            "CD",
+            "8T",
+            "LP"
+        ],
+        "gold": "true" 
+    }
+    ];
+
+    ```
+
+94. Accessing Nested Objects
+
+    ```js
+
+    const myStorage = {
+        "car": {
+            "inside": {
+                "glove box": "maps",
+                "passenger seat": "crumbs"
+            },
+            "outside": {
+            "trunk": "jack"
+            }
+        }
+    };
+
+    const gloveBoxContents = myStorage.car.inside["glove box"];
+
+    console.log(gloveBoxContents); // Print MAps
+
+    ```
+
+95. Accessing Nested Arrays
+
+    ```js
+
+    const myPlants = [
+    {
+        type: "flowers",
+        list: [
+            "rose",
+            "tulip",
+            "dandelion"
+        ]
+    },
+    {
+        type: "trees",
+        list: [
+            "fir",
+            "pine",
+            "birch"
+        ]
+    }
+    
+    ];
+
+    const secondTree = myPlants[1].list[1];
+
+    console.log(secondTree);
+
+    ```
+
+96. Record Collection
+
+    ```js
+
+    const recordCollection = {
+        2548: {
+            albumTitle: 'Slippery When Wet',
+            artist: 'Bon Jovi',
+            tracks: ['Let It Rock', 'You Give Love a Bad Name']
+        },
+        2468: {
+            albumTitle: '1999',
+            artist: 'Prince',
+            tracks: ['1999', 'Little Red Corvette']
+        },
+        1245: {
+            artist: 'Robert Palmer',
+            tracks: []
+        },
+        5439: {
+            albumTitle: 'ABBA Gold'
+        }
+    };
+
+    function updateRecords(records, id, prop, value) {
+        if (value === '') 
+        {
+            delete records[id][prop];
+        }
+        else if (prop === "tracks") 
+        {
+            records[id][prop] = records[id][prop] || []; 
+            records[id][prop].push(value);
+        } 
+        else 
+        {
+            records[id][prop] = value;
+        }
+        return records;
+    }
+
+    updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+
+    ```
+
+97. Iterate with JavaScript While Loops
+
+    ```js
+
+    const myArray = [];
+
+    let i=5;
+
+    while(i>0)
+    {
+        myArray.push(i);
+        i--;
+    }
+
+    console.log(myArray); // Prints [5,4,3,2,1] 
+
+    ```
+
+98. Iterate with JavaScript For Loops
+
+    ```js
+
+    const myArray = [];
+
+    let i;
+    for(let i=1;i<=5;i++)
+    {
+        myArray.push(i);
+    }
+
+    console.log(myArray); // prints [1,2,3,4,5]
+
+    ```
+
+99. Iterate Odd Numbers With a For Loop
+
+    ```js
+
+    const myArray = [];
+
+    let i;
+
+    for(int i=1;i<=10;i+=2)
+    {
+        myArray.push(i);
+    }
+
+    console.log(myArray) // Print [1,3,5,7,9]
+
+    ```
+
+100. Count Backwards With a For Loop
+
+    ```js
+
+    const myArray = [];
+
+    let i;
+    for(int i=9;i>=1;i-=2)
+    {
+        myArray.push(i);
+    }
+
+    console.log(myArray) ; // Prints [9,7,5,3,1]
+
+    ```
+
+101. Iterate Through an Array with a For Loop
+
+    ```js
+
+    const myArr = [2, 3, 4, 5, 6];
+
+    let total = 0;
+
+    for(let i=0;i< myArr.length;i++)
+    {
+        total = total + myArr[i] ;
+    }
+
+    console.log(total); // Prints 20
+
+    ```
+
+102. Nesting For Loops
+
+    ```js
+
+    function multiplyAll(arr) {
+    let product = 1;
+
+    for(let i=0;i< arr.length ;i++)
+    {
+        for(let j=0;j< arr[i].length;j++)
+        {
+            product = product * arr[i][j];
+        }
+    }
+    return product;
+    }
+
+    console.log(multiplyAll([[1, 2], [3, 4], [5, 6, 7]])); // Prints 5040
+
+    ```
+
+103. Iterate with JavaScript Do...While Loops
+
+    ```js
+
+    const myArray = []
+    let i=10;
+
+    do{
+         myArray.push(i);
+        i++;
+    }while(i<10);
+
+    ```
+
+104. Replace Loops using Recursion
+
+    ```js
+
+    function sum(arr, n) 
+    {
+  
+        if(n <= 0) 
+        {
+            return 0;
+        } 
+        else 
+        {
+            return sum(arr, n - 1) + arr[n - 1];
+        }   
+  
+    }
+
+    ```
+
+105. Profile Lookup
+
+    ```js
+
+    const contacts = 
+    [
+        {
+            firstName: "Akira",
+            lastName: "Laine",
+            number: "0543236543",
+            likes: ["Pizza", "Coding", "Brownie Points"],
+        },
+        {
+            firstName: "Harry",
+            lastName: "Potter",
+            number: "0994372684",
+            likes: ["Hogwarts", "Magic", "Hagrid"],
+        },
+        {
+            firstName: "Sherlock",
+            lastName: "Holmes",
+            number: "0487345643",
+            likes: ["Intriguing Cases", "Violin"],
+        },
+        {
+            firstName: "Kristian",
+            lastName: "Vos",
+            number: "unknown",
+            likes: ["JavaScript", "Gaming", "Foxes"],
+        },
+    ];
+
+    function lookUpProfile(name, prop) 
+    {
+        for (let x = 0; x < contacts.length; x-++) 
+        {
+            if (contacts[x].firstName === name) 
+            {
+                if (contacts[x].hasOwnProperty(prop)) 
+                {
+                    return contacts[x][prop];
+                } 
+                else 
+                {
+                    return "No such property";
+                }
+            }
+        }
+        return "No such contact";
+    }
+
+    lookUpProfile("Akira", "likes");
+
+    ```
+
+106. Generate Random Fractions with JavaScript
+
+    ```js
+
+    function randomFraction() 
+    {
+
+        var result = 0;
+        while (result === 0) 
+        {
+            result = Math.random();
+        }
+
+        return result;
+
+    }
+
+    ```
+
+107. Generate Random Whole Numbers with JavaScript
+
+    ```js
+
+    var randomNumberBetween0and19 = Math.floor(Math.random() * 10);
+
+    function randomWholeNum() 
+    {
+        return Math.floor(Math.random() * 10);
+    }
+
+    console.log(randomNumberBetween0and19); // Prints randok number between 0 and 19
+
+    ```
+
+108. Generate Random Whole Numbers within a Range
+
+    ```js
+
+    function randomRange(myMin, myMax) 
+    {
+        return Math.floor(Math.random()* (myMax - myMin + 1)) + myMin;
+    }
+
+    console.log(randomRange(5,25));  // Prints random number betw 5 to 25 
+
+    ```
+
+109. Use the parseInt Function
+
+    ```js
+
+    function convertToInteger(str) 
+    {
+        return parseInt(str);
+    }
+
+    console.log(convertToInteger("56")); // returns 56
+
+    console.log(convertToInteger("Karan Shah")); // returns Nan
+
+    ```
+
+110. Use the parseInt Function with a Radix
+
+    ```js
+
+    function convertToInteger(str) 
+    {
+        return parseInt(str,2);
+    }
+
+    console.log(convertToInteger("10011")); // returns 19
+
+    ```
+
+111. Use the Conditional (Ternary) Operator
+
+    ```js
+
+    function checkEqual(a, b) 
+    {
+        return a == b ? "a and b are equal" : "a and b are not equal" ;
+    }
+
+    console.log(checkEqual(1, 2)); // returns a and b are unequal
+
+    ```
+
+112. Use Multiple Conditional (Ternary) Operators
+
+    ```js
+
+    function checkSign(num) 
+    {
+        return (num>0) ? "positive" : (num<0) ? "negative" : "zero" ;
+    }
+
+    console.log(checkSign(10)); // postive
+
+    console.log(checkSign(-12)); // negative
+
+    ```
+
+113. Use Recursion to Create a Countdown
+
+    ```js
+
+    function countdown(n)
+    {
+
+        if(n<1)
+        {
+            return [];
+        }
+        else
+        {
+            const countArray = countdown(n-1) ;
+            countArray.unshift(n);
+            return countArray;
+        }
+
+    }
+
+    console.log(countdown(10)); // prints [ 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 ]
+
+    ```
+
+114. Use Recursion to Create a Range of Numbers
+
+    ```js
+
+    function rangeOfNumbers(startNum, endNum) 
+    {
+        if (endNum < startNum) 
+        {   
+            return [];
+        } 
+        else 
+        {
+            const numbers = rangeOfNumbers(startNum, endNum - 1);
+            numbers.push(endNum);
+            return numbers;
+        }
+    };
+
+    console.log(rangeOfNumbers(10,20)); // prints [10,11,12,13,14,15,16,17,18,19,20]
+
+    ```
