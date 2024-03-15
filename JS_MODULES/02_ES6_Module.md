@@ -246,3 +246,130 @@
     bicycle.setGear(48);
     console.log(bicycle.gear);   // 48
     ```
+
+18. Use class Syntax to Define a Constructor Function
+
+    ```js
+    class Vegetable {
+        constructor(name) {
+            this.name = name;
+        }
+    }
+
+    const carrot = new Vegetable("carrot");
+    console.log(carrot.name); // => should be 'carrot'
+    ```
+
+19. Use getters and setters to Control Access to an Object
+
+    ```js
+    class Thermostat {
+        constructor(fahrenheit) {
+            this._fahrenheit = fahrenheit;
+        }
+  
+        get temperature() {
+            return (5 / 9) * (this._fahrenheit - 32);
+        }
+  
+        set temperature(celsius) {
+            return this._fahrenheit = (celsius * 9.0) / 5 + 32;
+        }
+    }
+    ```
+
+20. Create a Module Script
+
+    ```js
+    <script type="module" src="filename.js"></script>
+    ```
+
+21. Use export to Share a Code Block
+
+    ```js
+    export const uppercaseString = (string) => {
+        return string.toUpperCase();
+    }
+
+    export const lowercaseString = (string) => {
+        return string.toLowerCase()
+    }
+    ```
+
+22. Reuse JavaScript Code Using import
+
+    ```js
+    import { uppercaseString, lowercaseString } from './string_functions.js';
+    uppercaseString("hello");
+    lowercaseString("WORLD!");
+    ```
+
+23. Use * to Import Everything from a File
+
+    ```js
+    import * as stringFunctions from "./string_functions.js";
+    stringFunctions.uppercaseString("hello");
+    stringFunctions.lowercaseString("WORLD!");
+    ```
+
+24. Create an Export Fallback with export default
+
+    ```js
+    export default function subtract(x, y) {
+        return x - y;
+    }
+    ```
+
+25. Import a Default Export 
+
+    ```js
+    import subtract from "./math_functions.js";
+    subtract(7,4);
+    ```
+
+26. Create a JavaScript Promise 
+
+    ```js
+    const myPromise = new Promise((resolve, reject) => {
+        // code 
+    });
+    ```
+
+27. Complete a Promise with resolve and reject
+
+    ```js
+    const myPromise = new Promise((resolve, reject) => {
+        if(condition here) {
+            resolve("Promise was fulfilled");
+        } else {
+            reject("Promise was rejected");
+        }
+    });
+    ```
+
+28. Hamdle a Fulfilled Promise with "then"
+
+    ```js
+    const makeServerRequest = new Promise((resolve, reject) => {
+    let responseFromServer = false;
+    
+    if(responseFromServer) {
+        resolve("We got the data");
+    } else {  
+        reject("Data not received");
+    }
+    });
+
+    makeServerRequest.then(result => {
+        console.log(result);
+    });
+    ```
+
+29. Handle a Rejected Promise with catch
+
+    ```js
+    // above code 
+    makeServerRequest.catch(error => {
+        console.log(error);
+    });
+    ```
