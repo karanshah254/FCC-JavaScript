@@ -378,3 +378,16 @@ const filteredList = watchList
 
 console.log(filteredList);
 ```
+
+9. Implement the filter Method on a Prototype
+```js
+Array.prototype.myFilter = function (callback) {
+  const newArray = [];
+  for (let i = 0; i < this.length; i++) {
+    if (callback(this[i], i, this) == true) {
+      newArray.push(this[i]);
+    }
+  }
+  return newArray;
+};
+```
