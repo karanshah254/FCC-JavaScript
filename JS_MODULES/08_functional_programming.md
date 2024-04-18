@@ -391,3 +391,14 @@ Array.prototype.myFilter = function (callback) {
   return newArray;
 };
 ```
+
+10. Return Part of an Array Using the slice Method
+```js
+function sliceArray(anim, beginSlice, endSlice) {
+  const newArray = anim.slice(beginSlice, endSlice);
+  return newArray;
+}
+
+const inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
+```
