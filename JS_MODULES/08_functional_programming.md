@@ -595,3 +595,61 @@ function nonMutatingSort(arr) {
 }
 nonMutatingSort(globalArray);
 ```
+
+18. Split a String into an Array Using the split Method
+```js
+function splitify(str) {
+  return str.split(/\W/);
+}
+
+splitify("Hello World,I-am code");
+```
+
+19. Combine an Array into a String Using the join Method
+```js
+function sentensify(str) {
+  return str.split(/\W/).join(" ");
+}
+
+sentensify("May-the-force-be-with-you");
+```
+
+20. Apply Functional Programming to Convert Strings to URL Slugs
+```js
+function urlSlug(title) {
+  return title.toLowerCase().trim().split(/\s+/).join("-");
+}
+
+urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
+```
+
+21. Use the every Method to Check that Every Element in an Array Meets a Criteria
+```js
+function checkPositive(arr) {
+  return arr.every(value => value > 0);
+}
+
+checkPositive([1, 2, 3, -4, 5]);
+```
+
+22. Use the some Method to Check that Any Elements in an Array Meet a Criteria
+```js
+function checkPositive(arr) {
+  return arr.some(value => value > 0);
+}
+
+checkPositive([1, 2, 3, -4, 5]);
+```
+
+23. Introduction to Currying and Partial Application
+```js
+function add(x) {
+  return function (y) {
+    return function (z) {
+      return x + y + z;
+    }
+  }
+}
+
+add(10)(20)(30);
+```
