@@ -7,3 +7,5 @@
 - >Telephone Number Validator Project<br>https://karanshah254.github.io/FCC-JavaScript/JS-BETA-MODULES/TelephoneNumberValidator/
 
 - >Cash Register Project<br>https://karanshah254.github.io/FCC-JavaScript/JS-BETA-MODULES/CashRegister/
+
+- >Pokemon Search App Project<br>https://karanshah254.github.io/FCC-JavaScript/JS-BETA-MODULES/PokemonSearchApp/
